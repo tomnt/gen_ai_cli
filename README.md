@@ -21,7 +21,8 @@ This project provides a simple command-line interface (CLI) for interacting with
    git clone https://github.com/tomnt/gen_ai_cli
    ```
 2. Install the required dependencies:
-   Bash/Zsh (Linux/macOS)
+
+- **macOS/Linux (Bash/Zsh):**
 
 ```bash (or PowerShell)
    python -m venv venv
@@ -29,7 +30,7 @@ This project provides a simple command-line interface (CLI) for interacting with
    pip install -r requirements.txt
 ```
 
-Windows PowerShell
+- **Windows (PowerShell):**
 
 ```bash (or PowerShell)
    python -m venv venv
@@ -50,6 +51,16 @@ Windows PowerShell
 
 You must set your OpenAI API key as an environment variable named `OPENAI_API_KEY`.
 
+- **macOS/Linux (Bash/Zsh):**
+
+Open the .zshrc or .bashrc, .bash_profile file.
+
+```bash
+vim ~/.zshrc         # Zsh
+vim ~/.bashrc        # Bash(.bashrc)
+vim ~/.bash_profile  # Bash(.bash_profile)
+```
+
 - **Windows (PowerShell):**
 
 ```powershell
@@ -61,16 +72,6 @@ Get-ChildItem Env: | findstr 'OPENAI_API_KEY'
 
 # # To clear the OpenAI API key environment variable, uncomment the line below
 # [System.Environment]::SetEnvironmentVariable("OPENAI_API_KEY", $null, "User")
-```
-
-- **macOS/Linux (Bash/Zsh):**
-
-Open the .zshrc or .bashrc, .bash_profile file.
-
-```bash
-vim ~/.zshrc         # Zsh
-vim ~/.bashrc        # Bash(.bashrc)
-vim ~/.bash_profile  # Bash(.bash_profile)
 ```
 
 ### Write your OpenAI API key as an environment variable on the file.
