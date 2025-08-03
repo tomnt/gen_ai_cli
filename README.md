@@ -22,21 +22,21 @@ This project provides a simple command-line interface (CLI) for interacting with
    ```
 2. Install the required dependencies:
 
-- **macOS/Linux (Bash/Zsh):**
+   - **macOS/Linux (Bash/Zsh):**
 
-```bash (or PowerShell)
-   python -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
-```
+     ```bash (or PowerShell)
+     python -m venv venv
+     source venv/bin/activate
+     pip install -r requirements.txt
+     ```
 
-- **Windows (PowerShell):**
+   - **Windows (PowerShell):**
 
-```bash (or PowerShell)
-   python -m venv venv
-   .\venv\Scripts\activate
-   pip install -r requirements.txt
-```
+     ```bash (or PowerShell)
+     python -m venv venv
+     .\venv\Scripts\activate
+     pip install -r requirements.txt
+     ```
 
 ## Setting Up Your OpenAI API Key
 
@@ -53,38 +53,44 @@ You must set your OpenAI API key as an environment variable named `OPENAI_API_KE
 
 - **macOS/Linux (Bash/Zsh):**
 
-Open the .zshrc or .bashrc, .bash_profile file.
+  Open the .zshrc or .bashrc, .bash_profile file.
 
-```bash
-vim ~/.zshrc         # Zsh
-vim ~/.bashrc        # Bash(.bashrc)
-vim ~/.bash_profile  # Bash(.bash_profile)
-```
+  ```bash
+  vim ~/.zshrc         # Zsh
+  vim ~/.bashrc        # Bash(.bashrc)
+  vim ~/.bash_profile  # Bash(.bash_profile)
+  ```
+
+  Write your OpenAI API key as an environment variable on the file.
+
+  ```shell
+  export OPENAI_API_KEY="sk-your_api_key_here"
+  ```
+
+  To view the current OpenAI API key environment variable:
+
+  ```bash
+  echo $OPENAI_API_KEY
+  ```
 
 - **Windows (PowerShell):**
 
-```powershell
-# Set your OpenAI API key as an environment variable
-[System.Environment]::SetEnvironmentVariable("OPENAI_API_KEY", "sk-your_api_key_here", "User")
+  Set your OpenAI API key as an environment variable.
 
-# To view the current OpenAI API key environment variable:
-Get-ChildItem Env: | findstr 'OPENAI_API_KEY'
+  ```powershell
+  [System.Environment]::SetEnvironmentVariable("OPENAI_API_KEY", "sk-your_api_key_here", "User")
+  ```
 
-# # To clear the OpenAI API key environment variable, uncomment the line below
-# [System.Environment]::SetEnvironmentVariable("OPENAI_API_KEY", $null, "User")
-```
+  To view or clear the environment variable.
 
-### Write your OpenAI API key as an environment variable on the file.
+  ````powershell
+  # To view the current OpenAI API key environment variable:
+  ```powershell
+  Get-ChildItem Env: | findstr 'OPENAI_API_KEY'
 
-```shell
-export OPENAI_API_KEY="sk-your_api_key_here"
-```
-
-# To view the current OpenAI API key environment variable:
-
-```bash
-echo $OPENAI_API_KEY
-```
+  # # To clear the OpenAI API key environment variable, uncomment the line below
+  # [System.Environment]::SetEnvironmentVariable("OPENAI_API_KEY", $null, "User")
+  ````
 
 ## Usage
 
